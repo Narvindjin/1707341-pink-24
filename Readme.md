@@ -1,7 +1,7 @@
 # Личный проект «Пинк» 
 
 * Студент: [Максим Дубровин](https://up.htmlacademy.ru/adaptive/24/user/1707341).
-* Наставник: `Неизвестно`.
+* Наставник: [Artem Ryzhov] (https://htmlacademy.ru/profile/id1387905).
 
 ---
 
