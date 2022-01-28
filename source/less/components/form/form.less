@@ -1,12 +1,68 @@
-.form-title{
+.form__wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding-top: 54px;
+  margin-bottom: 56px;
+  box-sizing: border-box;
+  @media (min-width: @desktop-width) {
+    padding-top: 98px;
+    width: 100%;
+  }
+}
+.form {
+  width: 100vw;
+  max-width: @desktop-width;
+  box-sizing: border-box;
   .padding-side--small;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: @desktop-width){
+    .padding-side--large;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+.form__title {
   .font-normal;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
   color: @blueish;
-  margin: 0;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 35px;
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 30px;
+    width: 490px;
+    margin-bottom: 72px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 760px;
+    margin-bottom: 75px;
+  }
+}
+.form__title-add {
+  display: none;
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+}
+.form__submit-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    order: 7;
+    justify-content: space-between;
+  }
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 .form__submit {
   .font-bold;
@@ -17,14 +73,39 @@
   border: 2px solid #2AAB6D;
   border-radius: 1px;
   color: #FFFFFF;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  cursor: pointer;
+  @media (min-width: @tablet-width) {
+    min-width: 300px;
+    margin-left: 0;
+  }
 }
 .form__tip {
   .font-normal;
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
-  align-items: center;
+  text-align: center;
   color: @blueish;
+  margin-top: 34px;
+  margin-bottom: 0px;
+  @media (min-width: @tablet-width) {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+.form__tip-skip {
+  display: none;
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
 }
 .form__important {
   color: @redish;

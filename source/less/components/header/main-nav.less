@@ -1,12 +1,104 @@
 .main-nav__toggle {
-  background: none;
+  background: transparent;
   border: none;
   padding: 0;
-  display: block;
+  display: flex;
+  z-index: 4;
+  @media (min-width: @desktop-width){
+    display: none;
+  }
+}
+.main-nav {
+  display: flex;
+}
+.main-nav__cross {
+  display: flex;
 }
 .main-nav__burger {
-  display: block;
+  display: none;
+}
+.main-nav--close {
+  .main-nav__cross {
+    display: none;
+  }
+  .main-nav__burger {
+    display: flex;
+  }
+  .main-nav__list {
+    @media (max-width: 1199px) {
+      display: none;
+    }
+  }
 }
 .main-nav__list {
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  background-color: @blueish;
+  box-sizing: border-box;
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    width: 800px;
+    position: relative;
+    background: transparent;
+    justify-content: right;
+  }
+}
+.main-nav__item {
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 15.5px;
+  padding-bottom: 15.5px;
+  width: 100%;
+  box-shadow: 0px 1px 0px #000000, inset 0px 1px 0px rgba(255, 255, 255, 0.15);
+  @media (min-width: @desktop-width) {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+    margin-right: 58px;
+  }
+}
+.main-nav__item:last-child {
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
+}
+.main-nav__link {
+  .font-bold;
+  font-size: 18px;
+  line-height: 32px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  @media (min-width: @desktop-width) {
+    text-transform: none;
+    line-height: 18px;
+    .font-normal;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+.main-nav__item--skip {
+  padding-top: 34.5px;
+  padding-bottom: 34.5px;
+  box-shadow: 0px 1px 0px #000000;
+  @media (min-width: @tablet-width){
+    padding-top: 54.5px;
+    padding-bottom: 54.5px;
+  }
+  @media (min-width: @desktop-width){
+    display: none;
+  }
 }

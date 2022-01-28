@@ -1,8 +1,30 @@
 .device {
-  .padding-side--small;
   border: none;
   box-sizing: border-box;
   background-color: #F2F2F2;
+  width: 100vw;
+  margin-left: -20px;
+  .padding-side--small;
+  padding-top: 38px;
+  padding-bottom: 0px;
+  margin-bottom: 38px;
+  margin-right: 0;
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    width: auto;
+    background-color: #FFFFFF;
+    order: 3;
+    border: 2px solid #E5E5E5;
+    border-radius: 1px;
+    margin-bottom: 53px;
+    padding: 0;
+  }
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 37px);
+    margin-left: 37px;
+  }
 }
 .device__title {
   .font-normal;
@@ -11,15 +33,73 @@
   text-transform: uppercase;
   text-align: center;
   color: @redish;
+  float: left;
+  margin-bottom: 40px;
+  width: 100%;
+  @media (min-width: @tablet-width) {
+    float: none;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 0px;
+  }
 }
 .device__list {
   list-style-type: none;
   .font-normal;
   margin: 0;
   padding: 0;
+  margin-bottom: 40px;
+  @media (min-width: @tablet-width) {
+    margin-top: 37px;
+    margin-left: 58px;
+    margin-bottom: 52px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 72px;
+  }
+}
+.device__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 34px;
+  width: 100%;
+  label {
+    cursor: pointer;
+  }
+}
+.device__item:last-child {
+  margin-bottom: 0;
+}
+.device__custom-radio {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.device__custom-radio::before {
+  content: "";
+  display: inline-block;
+  height: 39px;
+  width: 39px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #E5E5E5;
+  border-radius: 50%;
+}
+.device__input:checked + .device__custom-radio::before{
+  background-image: url(../img/form/radio-checked.svg);
 }
 .device__label {
   font-size: 18px;
   line-height: 30px;
   color: @blueish;
+  margin-left: 29px;
+  @media (min-width: @tablet-width) {
+    margin-left: 20px;
+  }
 }
