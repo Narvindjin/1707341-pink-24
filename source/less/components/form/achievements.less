@@ -31,12 +31,13 @@
   color: @redish;
   float: left;
   margin-bottom: 40px;
-  width: 100%;
+  width: 218px;
+  padding-left: calc((100vw - 258px) / 2);
+  margin-left: auto;
+  margin-right: auto;
   @media (min-width: @tablet-width) {
     float: none;
     width: auto;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 31px;
     padding-right: 31px;
     margin-bottom: 0px;
@@ -85,8 +86,8 @@
 .achievements__custom-checkbox::before {
   content: "";
   display: inline-block;
-  height: 37px;
-  width: 37px;
+  height: 39px;
+  width: 39px;
   box-sizing: border-box;
   background-color: #FFFFFF;
   background-repeat: no-repeat;
@@ -94,12 +95,18 @@
   border: 2px solid #E5E5E5;
   border-radius: 1px;
 }
-.achievements__input:checked + .achievements__custom-checkbox::before{
+.achievements__input:checked + .achievements__custom-checkbox::before {
   background-image: url(../img/form/tick.svg);
+}
+.achievements__input:hover + .achievements__custom-checkbox::before {
+  border-color: @blueish;
+}
+.achievements__input:active + .achievements__custom-checkbox::before {
+  border-color: @redish;
 }
 .achievements__label {
   font-size: 18px;
   line-height: 30px;
   color: @blueish;
-  margin-left: 20px;
+  padding-left: 20px;
 }

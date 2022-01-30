@@ -3,22 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="fav/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="fav/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <title>Приложение PINK</title>
 </head>
 <body class="page__body">
-  <header class="page-header"><!--add page-header--fixed to make header fixed to top-->
+  <header class="page-header"><!--remove page-header--fixed to add header to flow-->
     <div class="page-header__wrapper">
     <a class="page-header__logo" href="index.html">
-      <svg class="page-header__logo-image" aria-hidden="true" focusable="false" width="74" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 1.55A1.29 1.29 0 0 1 1.26.26h7.13c5.06 0 8.39 2.7 8.39 7.13v.06c0 4.85-4.04 7.36-8.8 7.36H2.53v6.8A1.28 1.28 0 0 1 1.27 23 1.27 1.27 0 0 1 0 21.61V1.55Zm8.07 10.97c3.7 0 6.14-2 6.14-4.99v-.06c0-3.2-2.4-4.87-5.96-4.87H2.6v9.88l5.48.04ZM21.6 1.39A1.28 1.28 0 0 1 22.85 0a1.27 1.27 0 0 1 1.27 1.39V21.6A1.28 1.28 0 0 1 22.86 23a1.27 1.27 0 0 1-1.27-1.39V1.4ZM30.67 1.42A1.28 1.28 0 0 1 31.93.17h.34a1.54 1.54 0 0 1 1.29.74l13.6 17.4V1.36A1.24 1.24 0 0 1 48.39.12a1.23 1.23 0 0 1 1.23 1.24v20.3a1.14 1.14 0 0 1-1.15 1.17h-.13a1.7 1.7 0 0 1-1.31-.78L33.12 4.25v17.4a1.26 1.26 0 0 1-1.2 1.25 1.23 1.23 0 0 1-1.2-1.25V1.42h-.05ZM55.94 1.39A1.28 1.28 0 0 1 57.2 0a1.27 1.27 0 0 1 1.26 1.39v12.3L71.23.54c.26-.27.62-.43 1-.45a1.27 1.27 0 0 1 1.21 1.26 1.29 1.29 0 0 1-.41.9l-7.95 7.9 8.57 10.52c.23.26.35.6.35.94a1.31 1.31 0 0 1-1.34 1.28 1.23 1.23 0 0 1-1-.58L63.3 11.86l-4.83 4.85v4.88a1.27 1.27 0 0 1-1.26 1.27 1.26 1.26 0 0 1-1.26-1.27V1.4h-.01Z" fill="#fff"/>
+      <svg class="page-header__logo-mobile" aria-hidden="true" focusable="false" width="74" height="23">
+        <use href="img/sprite.svg#logotype-mobile"></use>
+      </svg>
+      <svg class="page-header__logo-tablet" aria-hidden="true" focusable="false" width="145" height="40">
+        <use href="img/sprite.svg#logotype-tablet"></use>
+      </svg>
+      <svg class="page-header__logo-desktop" aria-hidden="true" focusable="false" width="147" height="40">
+        <use href="img/sprite.svg#logotype-desktop"></use>
       </svg>
       <span class="visually-hidden">Приложение Пинк</span>
     </a>
     <nav class="main-nav main-nav--close"> <!--add main-nav--close to close navigation-->
       <button class="main-nav__toggle" type="button">
-        <svg class="main-nav__burger" aria-hidden="true" focusable="false" width="50" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.14 0C.99 0 .84.02.7.07S.43.2.33.3A.88.88 0 0 0 0 1v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0 0 50 3V1a.94.94 0 0 0-.33-.7c-.22-.2-.5-.3-.8-.3H1.13Zm0 10c-.15 0-.3.02-.44.07s-.27.12-.37.22A.88.88 0 0 0 0 11v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0 0 50 13v-2a.94.94 0 0 0-.33-.7c-.22-.2-.5-.3-.8-.3H1.13Zm0 10c-.15 0-.3.02-.44.07s-.27.12-.37.22A.88.88 0 0 0 0 21v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0 0 50 23v-2a.94.94 0 0 0-.33-.7c-.22-.2-.5-.3-.8-.3H1.13Z" fill="#fff"/>
+        <svg class="main-nav__burger" aria-hidden="true" focusable="false" width="50" height="24">
+          <use href="img/sprite.svg#burger"></use>
         </svg>
-        <svg class="main-nav__cross" aria-hidden="true" focusable="false" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.85 0 0 20.85 2.15 23 23 2.15 20.85 0Z" fill="#fff"/><path d="M2.15 0 0 2.15 20.85 23 23 20.85 2.15 0Z" fill="#fff"/>
+        <svg class="main-nav__cross" aria-hidden="true" focusable="false" width="23" height="23">
+          <use href="img/sprite.svg#cross"></use>
         </svg>
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -53,6 +66,9 @@
           <p class="gallery__best">Панорама дня</p>
           <a class="gallery__link" href="img/catalog/panorama-desktop.jpg">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/panorama-desktop.webp 1x, img/catalog/panorama-desktop2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/catalog/panorama-tablet.webp 1x, img/catalog/panorama-tablet2x.webp 2x">
+            <source type="image/webp" srcset="img/catalog/panorama-mobile.webp 1x, img/catalog/panorama-mobile2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/catalog/panorama-desktop.jpg 1x, img/catalog/panorama-desktop2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/catalog/panorama-tablet.jpg 1x, img/catalog/panorama-tablet2x.jpg 2x">
             <img class="gallery__image gallery__image--panoramic" src="img/catalog/panorama-mobile.jpg" srcset="img/catalog/panorama-mobile2x.jpg 2x"  alt="Панорама моста над обширным лесом.">
@@ -64,13 +80,20 @@
               прямую трансляцию в перископе, задавайте свои вопросы!</blockquote>
               <div class="gallery__like-wrapper gallery__like-wrapper--panoramic">
               <p class="gallery__like">Нравится: 215</p>
-            <button class="gallery__like-button" type="button"></button>
+            <button class="gallery__like-button" type="button">
+              <svg aria-hidden="true" focusable="false" width="13" height="12">
+                <use href="img/sprite.svg#heart"></use>
+              </svg>
+            </button>
           </div>
         </div>
         </li>
         <li class="gallery__item">
           <a class="gallery__link" href="img/catalog/photo-1-desktop.jpg">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/photo-1-desktop.webp 1x, img/catalog/photo-1-desktop2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/catalog/photo-1-tablet.webp 1x, img/catalog/photo-1-tablet2x.webp 2x">
+            <source type="image/webp" srcset="img/catalog/photo-1-mobile.webp 1x, img/catalog/photo-1-mobile2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/catalog/photo-1-desktop.jpg 1x, img/catalog/photo-1-desktop2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/catalog/photo-1-tablet.jpg 1x, img/catalog/photo-1-tablet2x.jpg 2x">
             <img class="gallery__image" src="img/catalog/photo-1-mobile.jpg" srcset="img/catalog/photo-1-mobile2x.jpg" alt="Белый автомобиль на фотосете.">
@@ -81,13 +104,20 @@
             <blockquote class="gallery__description">Вчера он на луну летал, сегодня в руки к нам попал.</blockquote>
           <div class="gallery__like-wrapper">
             <p class="gallery__like">Нравится: 356</p>
-            <button class="gallery__like-button" type="button"></button>
+            <button class="gallery__like-button" type="button">
+              <svg aria-hidden="true" focusable="false" width="13" height="12">
+                <use href="img/sprite.svg#heart"></use>
+              </svg>
+            </button>
           </div>
         </div>
         </li>
         <li class="gallery__item">
           <a class="gallery__link" href="img/catalog/photo-2-desktop.jpg">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/photo-2-desktop.webp 1x, img/catalog/photo-2-desktop2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/catalog/photo-2-tablet.webp 1x, img/catalog/photo-2-tablet2x.webp 2x">
+            <source type="image/webp" srcset="img/catalog/photo-2-mobile.webp 1x, img/catalog/photo-2-mobile2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/catalog/photo-2-desktop.jpg 1x, img/catalog/photo-2-desktop2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/catalog/photo-2-tablet.jpg 1x, img/catalog/photo-2-tablet2x.jpg 2x">
             <img class="gallery__image" src="img/catalog/photo-2-mobile.jpg" srcset="img/catalog/photo-2-mobile2x.jpg" alt="Комплект новеньких барабанов.">
@@ -98,13 +128,20 @@
             <blockquote class="gallery__description">Соседи будут рады!</blockquote>
           <div class="gallery__like-wrapper">
             <p class="gallery__like">Нравится: 666</p>
-            <button class="gallery__like-button" type="button"></button>
+            <button class="gallery__like-button" type="button">
+              <svg aria-hidden="true" focusable="false" width="13" height="12">
+                <use href="img/sprite.svg#heart"></use>
+              </svg>
+            </button>
           </div>
         </div>
         </li>
         <li class="gallery__item">
           <a class="gallery__link" href="img/catalog/photo-3-desktop.jpg">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/photo-3-desktop.webp 1x, img/catalog/photo-3-desktop2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/catalog/photo-3-tablet.webp 1x, img/catalog/photo-3-tablet2x.webp 2x">
+            <source type="image/webp" srcset="img/catalog/photo-3-mobile.webp 1x, img/catalog/photo-3-mobile2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/catalog/photo-3-desktop.jpg 1x, img/catalog/photo-3-desktop2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/catalog/photo-3-tablet.jpg 1x, img/catalog/photo-3-tablet2x.jpg 2x">
             <img class="gallery__image" src="img/catalog/photo-3-mobile.jpg" srcset="img/catalog/photo-3-mobile2x.jpg" alt="Стеклянная крыша моста на фоне неба.">
@@ -115,13 +152,20 @@
             <blockquote class="gallery__description">Здесь могла быть ваша цитата о высоком и вечном.</blockquote>
           <div class="gallery__like-wrapper">
             <p class="gallery__like">Нравится: 215</p>
-            <button class="gallery__like-button" type="button"></button>
+            <button class="gallery__like-button" type="button">
+              <svg aria-hidden="true" focusable="false" width="13" height="12">
+                <use href="img/sprite.svg#heart"></use>
+              </svg>
+            </button>
           </div>
         </div>
         </li>
         <li class="gallery__item">
           <a class="gallery__link" href="img/catalog/photo-4-desktop.jpg">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/photo-4-desktop.webp 1x, img/catalog/photo-4-desktop2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/catalog/photo-4-tablet.webp 1x, img/catalog/photo-4-tablet2x.webp 2x">
+            <source type="image/webp" srcset="img/catalog/photo-4-mobile.webp 1x, img/catalog/photo-4-mobile2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/catalog/photo-4-desktop.jpg 1x, img/catalog/photo-4-desktop2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/catalog/photo-4-tablet.jpg 1x, img/catalog/photo-4-tablet2x.jpg 2x">
             <img class="gallery__image" src="img/catalog/photo-4-mobile.jpg" srcset="img/catalog/photo-4-mobile2x.jpg" alt="Кубанская бахча с большим количеством товара.">
@@ -132,13 +176,20 @@
             <blockquote class="gallery__description">Самая кубанская в мире!</blockquote>
           <div class="gallery__like-wrapper">
             <p class="gallery__like">Нравится: 4</p>
-            <button class="gallery__like-button" type="button"></button>
+            <button class="gallery__like-button" type="button">
+              <svg aria-hidden="true" focusable="false" width="13" height="12">
+                <use href="img/sprite.svg#heart"></use>
+              </svg>
+            </button>
           </div>
         </div>
         </li>
         <li class="gallery__item">
           <a class="gallery__link" href="img/catalog/photo-5-desktop.jpg">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/photo-5-desktop.webp 1x, img/catalog/photo-5-desktop2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/catalog/photo-5-tablet.webp 1x, img/catalog/photo-5-tablet2x.webp 2x">
+            <source type="image/webp" srcset="img/catalog/photo-5-mobile.webp 1x, img/catalog/photo-5-mobile2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/catalog/photo-5-desktop.jpg 1x, img/catalog/photo-5-desktop2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/catalog/photo-5-tablet.jpg 1x, img/catalog/photo-5-tablet2x.jpg 2x">
             <img class="gallery__image" src="img/catalog/photo-5-mobile.jpg" srcset="img/catalog/photo-5-mobile2x.jpg" alt="Ноги на фоне простирающихся бесснежных холмов.">
@@ -149,13 +200,20 @@
             <blockquote class="gallery__description">Где снег-то?</blockquote>
           <div class="gallery__like-wrapper">
             <p class="gallery__like">Нравится: 150</p>
-            <button class="gallery__like-button" type="button"></button>
+            <button class="gallery__like-button" type="button">
+              <svg aria-hidden="true" focusable="false" width="13" height="12">
+                <use href="img/sprite.svg#heart"></use>
+              </svg>
+            </button>
           </div>
         </div>
         </li>
         <li class="gallery__item">
           <a class="gallery__link" href="img/catalog/photo-6-desktop.jpg">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/photo-6-desktop.webp 1x, img/catalog/photo-6-desktop2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/catalog/photo-6-tablet.webp 1x, img/catalog/photo-6-tablet2x.webp 2x">
+            <source type="image/webp" srcset="img/catalog/photo-6-mobile.webp 1x, img/catalog/photo-6-mobile2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/catalog/photo-6-desktop.jpg 1x, img/catalog/photo-6-desktop2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/catalog/photo-6-tablet.jpg 1x, img/catalog/photo-6-tablet2x.jpg 2x">
             <img class="gallery__image" src="img/catalog/photo-6-mobile.jpg" srcset="img/catalog/photo-6-mobile2x.jpg" alt="Крыло самолёта на фоне солнца.">
@@ -166,7 +224,11 @@
             <blockquote class="gallery__description">Всем GM и взаимные лайки!</blockquote>
           <div class="gallery__like-wrapper">
             <p class="gallery__like">Нравится: 2560</p>
-            <button class="gallery__like-button" type="button"></button>
+            <button class="gallery__like-button" type="button">
+              <svg aria-hidden="true" focusable="false" width="13" height="12">
+                <use href="img/sprite.svg#heart"></use>
+              </svg>
+            </button>
           </div>
         </div>
         </li>
@@ -176,13 +238,19 @@
       <h2 class="upload__title">Затмите их всех! <br> Выкладывайте все, что накопилось в телефоне!</h2>
       <div class="upload__interface">
         <div class="upload__photo-wrapper">
-        <img class="upload__photo" alt="Ваша фотография.">
+          <picture>
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/catalog/photo-user-tablet.webp 1x, img/catalog/photo-user-tablet2x.webp 2x">
+            <source type="image/webp" srcset="img/catalog/photo-user-mobile.webp 1x, img/catalog/photo-user-mobile2x.webp 2x">
+            <source media="(min-width: 660px)" srcset="img/catalog/photo-user-tablet.jpg 1x, img/catalog/photo-user-tablet2x.jpg 2x">
+            <img class="upload__photo" src="img/catalog/photo-user-mobile.jpg" srcset="img/catalog/photo-user-mobile2x.jpg 2x" alt="Ваша фотография.">
+          </picture>
         </div>
         <form class="upload__form" method="post" action="https://echo.htmlacademy.ru">
           <ul class="upload__list">
             <li class="upload__item">
-              <button class="upload__setting upload__setting--current upload__setting--size" type="button">
-                <svg class="upload__setting-icon" aria-hidden="true" focusable="false" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32 28h4V12a4 4 0 0 0-4-4H16v4h16v16Zm-20 4V0H8v8H0v4h8v20a4 4 0 0 0 4 4h20v8h4v-8h8v-4H12Z" fill="#D22856"/>
+              <button class="upload__setting upload__setting--current" type="button">
+                <svg class="upload__setting-icon upload__setting--size" aria-hidden="true" focusable="false" viewBox="0 0 44 44">
+                  <use href="img/sprite.svg#crop"></use>
                 </svg>
               </button>
               <div class="upload__range upload__range--current">
@@ -192,8 +260,9 @@
               </div>
             </li>
             <li class="upload__item">
-              <button class="upload__setting upload__setting--color" type="button">
-                <svg class="upload__setting-icon" aria-hidden="true" focusable="false" width="48" height="43" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#283645"><path d="M33.12 17.88 15.24 0l-2.83 2.83 4.76 4.76L6.88 17.88a3 3 0 0 0 0 4.24l11 11a3 3 0 0 0 4.24 0l11-11a3 3 0 0 0 0-4.24ZM10.41 20 20 10.42 29.59 20H10.41ZM38 23s-4 4.33-4 7a4 4 0 1 0 8 0c0-2.67-4-7-4-7ZM48 40H0v3h48v-3Z"/></g>
+              <button class="upload__setting upload__setting" type="button">
+                <svg class="upload__setting-icon upload__setting--color" aria-hidden="true" focusable="false" viewBox="0 0 48 43">
+                  <use href="img/sprite.svg#fill"></use>
                 </svg>
               </button>
               <div class="upload__range">
@@ -203,8 +272,9 @@
               </div>
             </li>
             <li class="upload__item">
-              <button class="upload__setting upload__setting--brightness" type="button">
-                <svg class="upload__setting-icon" aria-hidden="true" focusable="false" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#283645"><path d="M16 4a12 12 0 1 1 0 24 12 12 0 0 1 0-24Zm0-4a16 16 0 1 0 0 32 16 16 0 0 0 0-32Z"/><path d="M16 24.29a8.52 8.52 0 0 0 0-17"/></g>
+              <button class="upload__setting" type="button">
+                <svg class="upload__setting-icon upload__setting--brightness" aria-hidden="true" focusable="false" viewBox="0 0 32 32">
+                  <use href="img/sprite.svg#contrast"></use>
                 </svg>
               </button>
               <div class="upload__range">
@@ -214,8 +284,10 @@
               </div>
             </li>
           </ul>
-          <button class="upload__post" type="submit">Запостить</button>
-          <button class="upload__cancel" type="reset">Отмена</button>
+          <div class="upload__buttons-container">
+            <button class="upload__post" type="submit">Запостить</button>
+            <button class="upload__cancel" type="reset">Отмена</button>
+          </div>
         </form>
       </div>
     </section>
@@ -223,28 +295,35 @@
   <footer class="page-footer">
     <div class="footer__wrapper">
     <a class="footer__logo" href="index.html">
-      <svg aria-hidden="true" focusable="false" width="145" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M71 18.55a1.29 1.29 0 0 1 1.26-1.29h7.13c5.06 0 8.39 2.7 8.39 7.13v.06c0 4.85-4.04 7.36-8.8 7.36h-5.44v6.8A1.28 1.28 0 0 1 72.27 40 1.27 1.27 0 0 1 71 38.61V18.55Zm8.07 10.97c3.7 0 6.14-2 6.14-4.99v-.06c0-3.2-2.4-4.87-5.96-4.87H73.6v9.88l5.48.04ZM92.6 18.39A1.28 1.28 0 0 1 93.85 17a1.27 1.27 0 0 1 1.27 1.39V38.6A1.28 1.28 0 0 1 93.86 40a1.27 1.27 0 0 1-1.27-1.39V18.4ZM101.67 18.42a1.28 1.28 0 0 1 1.26-1.25h.34a1.53 1.53 0 0 1 1.29.74l13.6 17.4V18.36a1.24 1.24 0 0 1 1.23-1.24 1.23 1.23 0 0 1 1.23 1.24v20.3a1.16 1.16 0 0 1-.32.83 1.13 1.13 0 0 1-.83.34h-.13a1.69 1.69 0 0 1-1.31-.78l-13.91-17.8v17.4a1.26 1.26 0 0 1-1.2 1.25 1.23 1.23 0 0 1-1.2-1.25V18.42h-.05ZM126.94 18.39A1.28 1.28 0 0 1 128.2 17a1.27 1.27 0 0 1 1.26 1.39v12.3l12.76-13.14c.26-.27.62-.43 1-.45a1.27 1.27 0 0 1 1.21 1.26 1.3 1.3 0 0 1-.41.9l-7.95 7.9 8.57 10.52c.23.26.35.6.35.94a1.33 1.33 0 0 1-.4.92 1.29 1.29 0 0 1-.94.36 1.23 1.23 0 0 1-1-.58l-8.36-10.46-4.83 4.85v4.88a1.28 1.28 0 0 1-.78 1.17 1.26 1.26 0 0 1-1.74-1.17V18.4h-.01Z" fill="#283645"/><path fill-rule="evenodd" clip-rule="evenodd" d="m53.9 6.59 5.03 21.14a1.42 1.42 0 0 1-.75 1.72c-.2.09-.43.13-.65.11h-4.01a11.63 11.63 0 0 1-11.49 10.32c-5.92 0-10.8-4.5-11.49-10.32h-1.96A11.75 11.75 0 0 1 16.97 40c-6 0-10.94-4.57-11.61-10.47H1.45A1.36 1.36 0 0 1 .3 29a1.42 1.42 0 0 1-.24-1.27L5.1 6.6C5.46 4.26 7.64 0 13.5 0c.38 0 .76.16 1.03.44a1.5 1.5 0 0 1 0 2.1c-.27.27-.65.43-1.03.43-4.71 0-5.44 3.7-5.5 4.1L3.34 26.6h2.03a11.75 11.75 0 0 1 11.6-10.3c5.94 0 10.84 4.48 11.6 10.3h1.99a11.63 11.63 0 0 1 11.47-10.19c5.89 0 10.75 4.46 11.48 10.23v-.06h2.14L51 7.08c-.07-.41-.77-4.1-5.5-4.1-.39 0-.76-.17-1.03-.44a1.5 1.5 0 0 1 0-2.1c.27-.28.64-.44 1.03-.44 5.85 0 8.03 4.26 8.38 6.59ZM25.66 29.56a9.12 9.12 0 0 0-.02-2.97 8.85 8.85 0 0 0-8.68-7.38 8.85 8.85 0 0 0-8.82 8.94 8.85 8.85 0 0 0 8.81 8.94c4.4 0 8.04-3.26 8.71-7.53Zm24.94 0a8.75 8.75 0 0 0-8.58-10.23 8.75 8.75 0 0 0-8.58 10.23 8.73 8.73 0 0 0 8.58 7.4c4.33 0 7.91-3.2 8.58-7.4Z" fill="#D22856"/>
+      <svg class="footer__logo-tablet" aria-hidden="true" focusable="false" width="145" height="40">
+        <use href="img/sprite.svg#logotype-tablet-footer"></use>
+      </svg>
+      <svg class="footer__logo-desktop" aria-hidden="true" focusable="false" width="147" height="40">
+        <use href="img/sprite.svg#logotype-desktop-footer"></use>
       </svg>
       <span class="visually-hidden">Приложение Пинк</span>
     </a>
     <ul class="social">
       <li class="social__item">
         <a class="social__link social__twitter" href="https://twitter.com/htmlacademy_ru">
-          <svg aria-hidden="true" focusable="false" width="54" height="54" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity=".1" cx="27" cy="27" r="25.5" fill="#fff" stroke="#283645" stroke-width="3"/><path d="M29.56 20.17a3.67 3.67 0 0 1 2.11-.03c.69.2 1.3.59 1.72 1.12.72-.2 1.42-.44 2.14-.65-.01.32-.1.63-.26.91a2.2 2.2 0 0 1-.65.73A1.8 1.8 0 0 0 36 21.8c-.1.41-.3.8-.59 1.13-.29.33-.65.6-1.07.77-.25 6.27-3.37 10.47-10.69 10.3h-.5c-.44 0-4.42-.43-5.15-1.76a7.28 7.28 0 0 0 4.98-1.09c-1.03-.29-2.85-.45-3.16-2.74.4.13.81.16 1.22.09-1.28-.8-2.7-1.46-2.62-3.5.4.3.9.46 1.42.43-.74-.23-2.09-3.12-.94-4.6 1.92 1.72 3.96 3.34 7.59 3.5.22-2.12 1.2-3.55 3.07-4.16Z" fill="#D22856"/>
+          <svg aria-hidden="true" focusable="false" width="18" height="14">
+            <use href="img/sprite.svg#twitter"></use>
           </svg>
           <span class="visually-hidden">Твиттер</span>
         </a>
       </li>
       <li class="social__item">
         <a class="social__link social__facebook" href="https://www.facebook.com/htmlacademy">
-          <svg aria-hidden="true" focusable="false" width="54" height="54" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity=".1" cx="27" cy="27" r="25.5" fill="#fff" stroke="#283645" stroke-width="3"/><path d="M29.5 21.2H32V18h-2.98c-3.26.17-4.42 2.27-3.94 5.82H23v3.33h2.08V36h3.94v-8.85h2.96v-3.33H29c-.02-1-.04-2.3.5-2.63Z" fill="#D22856"/>
+          <svg aria-hidden="true" focusable="false" width="9" height="18">
+            <use href="img/sprite.svg#facebook"></use>
           </svg>
           <span class="visually-hidden">Фейсбук</span>
         </a>
       </li>
       <li class="social__item">
         <a class="social__link social__youtube" href="https://www.youtube.com/c/HTMLAcademyRUS">
-          <svg aria-hidden="true" focusable="false" width="54" height="54" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity=".1" cx="27" cy="27" r="25.5" fill="#fff" stroke="#283645" stroke-width="3"/><path d="M23.83 33.8a1.25 1.25 0 0 1-1.28.04 1.1 1.1 0 0 1-.44-.46.97.97 0 0 1-.1-.6V22.22c-.03-.2 0-.41.1-.6.1-.2.24-.35.44-.46a1.26 1.26 0 0 1 1.28.03l12.4 5.5c1.03.45 1.03 1.17 0 1.62l-12.4 5.5Z" fill="#D22856"/>
+          <svg aria-hidden="true" focusable="false" width="15" height="13">
+            <use href="img/sprite.svg#youtube"></use>
           </svg>
           <span class="visually-hidden">Ютуб</span>
         </a>
@@ -253,7 +332,8 @@
     <div class="footer__made">
       <span class="footer__made--text">Разработано</span>
       <a class="footer__made--link" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg aria-hidden="true" focusable="false" width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z" fill="#D22856"/>
+        <svg aria-hidden="true" focusable="false" width="27" height="34">
+          <use href="img/sprite.svg#html-logo"></use>
         </svg>
         <span class="visually-hidden">HTML Academy</span>
       </a>

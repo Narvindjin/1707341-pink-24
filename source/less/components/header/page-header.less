@@ -26,12 +26,45 @@
   @media (min-width: @tablet-width) {
     padding-top: 27px;
     padding-bottom: 43px;
+    align-items: flex-end;
   }
   @media (min-width: @desktop-width) {
     .padding-side--large;
+    padding-bottom: 34px;
   }
 }
 .page-header__logo {
   display: flex;
   z-index: 4;
+  align-self: flex-start;
+}
+.page-header__logo-mobile {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+.page-header__logo-tablet {
+  display: none;
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+.page-header__logo-desktop {
+  display: none;
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+.page-header__logo svg {
+  fill: #FFFFFF;
+}
+.page-header__logo:hover svg {
+  fill: #D22856;
+}
+.page-header__logo:active svg {
+  fill: #FFFFFF;
+  opacity: 0.3;
 }

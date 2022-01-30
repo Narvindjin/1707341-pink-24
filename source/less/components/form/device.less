@@ -5,7 +5,7 @@
   width: 100vw;
   margin-left: -20px;
   .padding-side--small;
-  padding-top: 38px;
+  padding-top: 39px;
   padding-bottom: 0px;
   margin-bottom: 38px;
   margin-right: 0;
@@ -34,7 +34,7 @@
   text-align: center;
   color: @redish;
   float: left;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   width: 100%;
   @media (min-width: @tablet-width) {
     float: none;
@@ -53,7 +53,7 @@
   padding: 0;
   margin-bottom: 40px;
   @media (min-width: @tablet-width) {
-    margin-top: 37px;
+    margin-top: 43px;
     margin-left: 58px;
     margin-bottom: 52px;
   }
@@ -82,8 +82,8 @@
 .device__custom-radio::before {
   content: "";
   display: inline-block;
-  height: 39px;
-  width: 39px;
+  height: 41px;
+  width: 41px;
   box-sizing: border-box;
   background-color: #FFFFFF;
   background-repeat: no-repeat;
@@ -94,12 +94,18 @@
 .device__input:checked + .device__custom-radio::before{
   background-image: url(../img/form/radio-checked.svg);
 }
+.device__input:hover + .device__custom-radio::before {
+  border-color: @blueish;
+}
+.device__input:active + .device__custom-radio::before {
+  border-color: @redish;
+}
 .device__label {
   font-size: 18px;
   line-height: 30px;
   color: @blueish;
-  margin-left: 29px;
+  padding-left: 29px;
   @media (min-width: @tablet-width) {
-    margin-left: 20px;
+    padding-left: 20px;
   }
 }

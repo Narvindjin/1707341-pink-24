@@ -1,10 +1,22 @@
 .reviews {
-  padding-top: 50px;
+  padding-top: 42px;
   background: #FFFFFF;
   display: flex;
+  position: relative;
   justify-content: center;
   @media (min-width: @desktop-width) {
     padding-bottom: 41px;
+    padding-top: 194px;
+  }
+}
+.reviews::before {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    background-image: url(../img/index/quotes.svg);
+    width: 79px;
+    height: 63px;
+    top: 72px;
   }
 }
 .reviews__wrapper {
@@ -88,9 +100,23 @@
 }
 .slider__arrow {
   display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
   @media (min-width: @desktop-width) {
     display: flex;
+    margin-top: 20px;
   }
+}
+.slider__arrow svg {
+  fill: @blueish;
+  opacity: 0.3;
+}
+.slider__arrow:hover svg {
+  opacity: 0.6;
+}
+.slider__arrow:active svg {
+  opacity: 0.1;
 }
 .reviews__toggles {
   margin: 0px;
