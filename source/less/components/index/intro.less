@@ -1,23 +1,22 @@
 .intro {
-  padding-top: 95px;
+  padding-top: 90px;
   display: flex;
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
-  margin-bottom: 46px;
+  margin-bottom: 0px;
   position: relative;
   @media (min-width: @tablet-width) {
     background-color: @blueish;
-    padding-top: 212px;
-    margin-bottom: 58px;
+    padding-top: 204px;
     background-image: url(../img/index/back-tablet.png);
     @media (min-resolution: 2dppx) {
       background-image: url(../img/index/back-tablet2x.png)
     }
   }
   @media (min-width: @desktop-width) {
-    padding-top: 224px;
+    padding-top: 209px;
     background-image: url(../img/index/back-desktop.png);
     @media (min-resolution: 2dppx) {
       background-image: url(../img/index/back-desktop2x.png)
@@ -50,10 +49,12 @@
   box-sizing: border-box;
   @media (min-width: @tablet-width) {
     .padding-side--small;
+    min-height: 525px;
   }
   @media (min-width: @desktop-width) {
     .padding-side--large;
     position: relative;
+    min-height: 644px;
   }
 }
 .intro__content-wrapper {
@@ -63,6 +64,10 @@
     margin-left: auto;
     margin-right: calc(50vw - 10px);
     width: 300px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-right: auto;
   }
 }
 .intro__title {
@@ -75,7 +80,7 @@
   color: #FFFFFF;
   width: 280px;
   margin-top: 0px;
-  margin-bottom: 23px;
+  margin-bottom: 29px;
   @media (min-width: @tablet-width) {
     font-size: 40px;
     line-height: 48px;
@@ -83,17 +88,16 @@
   }
   @media (min-width: @desktop-width) {
     width: auto;
-    .font-normal;
     font-size: 50px;
     line-height: 68px;
+    margin-bottom: 36px;
   }
 }
 .intro__image {
   background: transparent;
   width: 320px;
   height: 286px;
-  display: flex;
-  align-self: center;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   @media (min-width: @tablet-width) {
@@ -106,7 +110,8 @@
   @media (min-width: @desktop-width) {
     width: 1050px;
     height: 645px;
-    top: -16px;
-    right: 0;
+    bottom: 0;
+    right: 4px;
+    top: auto;
   }
 }

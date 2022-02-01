@@ -11,7 +11,7 @@
   <title>Приложение PINK</title>
 </head>
 <body class="page__body">
-  <header class="page-header"><!--remove page-header--fixed to add header to flow-->
+  <header class="page-header"><!--remove page-header--fixed to return header to flow-->
     <div class="page-header__wrapper">
     <a class="page-header__logo" href="index.html">
       <svg class="page-header__logo-mobile" aria-hidden="true" focusable="false" width="74" height="23">
@@ -66,7 +66,7 @@
           <source type="image/webp" srcset="img/index/phone-mobile.webp 1x, img/index/phone-mobile2x.webp 2x">
           <source media="(min-width: 1200px)" srcset="img/index/phone-desktop.png 1x, img/index/phone-desktop2x.png 2x">
           <source media="(min-width: 660px)" srcset="img/index/phone-tablet.png 1x, img/index/phone-tablet2x.png 2x">
-          <img class="intro__image" src="img/index/phone-mobile.png" srcset="img/index/phone-mobile2x.png 2x" alt="Смартфон, на экране которого улица, раскрашенная в розовый цвет.">
+          <img class="intro__image" src="img/index/phone-mobile.png" width="320" height="286" srcset="img/index/phone-mobile2x.png 2x" alt="Смартфон, на экране которого улица, раскрашенная в розовый цвет.">
         </picture>
       <div class="intro-download">
         <a class="button intro-download__button" href="https://www.apple.com/app-store">Скачать приложение</a>
@@ -122,28 +122,28 @@
         </li>
       </ul>
       <div class="advantages__picture">
-       <span class="visually-hidden">Смартфон с розовыми мусорными баками на экране. Поверх них улыбающийся смайлик с надписью Всем привет!"</span>
+        <span class="visually-hidden">Смартфон с розовыми мусорными баками на экране. Поверх них улыбающийся смайлик с надписью Всем привет!"</span>
       </div>
     </div>
   </div>
     </section>
     <section class="information">
       <div class="information__wrapper">
-      <div class="information__clock-wrapper">
-      <img class="information__clock" src="img/index/clock.svg" alt="Часы, на которых изображено число 24." width="238" height="276">
-     </div>
-      <div class="information__content-wrapper">
-        <h2 class="information__title">Эффект на 24 часа!</h2>
-        <p class="information__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-        <a class="information__more" href="#">Узнать больше об исследовании</a>
+        <div class="information__clock-wrapper">
+          <img class="information__clock" src="img/index/clock.svg" alt="Часы, на которых изображено число 24." width="238" height="276">
+        </div>
+        <div class="information__content-wrapper">
+          <h2 class="information__title">Эффект на 24 часа!</h2>
+          <p class="information__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <a class="information__more" href="#">Узнать больше об исследовании</a>
+        </div>
       </div>
-    </div>
     </section>
     <section class="reviews">
       <div class="reviews__wrapper slider">
         <h2 class="visually-hidden">Отзывы о приложении</h2>
         <div class="reviews__list slider__list">
-          <button class="slider__arrow slider__arrow--left" type="button">
+          <button class="reviews__slider-arrow reviews__slider-arrow--left" type="button">
             <svg aria-hidden="true" focusable="false" width="22" height="41">
               <use href="img/sprite.svg#left-arrow"></use>
             </svg>
@@ -163,7 +163,7 @@
             <p class="reviews__info"></p>
             <p class="reviews__text"></p>
           </blockquote>
-          <button class="slider__arrow slider__arrow--right" type="button">
+          <button class="reviews__slider-arrow reviews__slider-arrow--right" type="button">
             <svg aria-hidden="true" focusable="false" width="22" height="41">
               <use href="img/sprite.svg#right-arrow"></use>
             </svg>
@@ -310,15 +310,15 @@
       <h2 class="contacts__title">Остались вопросы?<br> Свяжитесь с нами!</h2>
       <address class="contacts__address">
         <div class="contacts__content-wrapper contacts__content-wrapper--phone">
-        <h3 class="contacts__text">Звоните:</h3>
+        <p class="contacts__text">Звоните:</p>
         <a class="contacts__way" href="tel:+78125556666">+7 (812) 555-66-66</a>
       </div>
       <div class="contacts__content-wrapper contacts__content-wrapper--email">
-        <h3 class="contacts__text">Пишите:</h3>
+        <p class="contacts__text">Пишите:</p>
         <a class="contacts__way" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
       </div>
         <div class="contacts__content-wrapper contacts__content-wrapper--building">
-        <h3 class="contacts__text">Приезжайте в гости:</h3>
+        <p class="contacts__text">Приезжайте в гости:</p>
         <p class="contacts__way">ул. Большая Конюшенная, 19/8</p>
       </div>
       </address>

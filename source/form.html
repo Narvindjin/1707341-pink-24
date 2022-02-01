@@ -11,7 +11,7 @@
   <title>Приложение PINK</title>
 </head>
 <body class="page__body">
-  <header class="page-header"><!--remove page-header--fixed to add header to flow-->
+  <header class="page-header"><!--remove page-header--fixed to return header to flow-->
     <div class="page-header__wrapper">
     <a class="page-header__logo" href="index.html">
       <svg class="page-header__logo-mobile" aria-hidden="true" focusable="false" width="74" height="23">
@@ -25,7 +25,7 @@
       </svg>
       <span class="visually-hidden">Приложение Пинк</span>
     </a>
-    <nav class="main-nav main-nav--close"> <!--add main-nav--close to close navigation-->
+    <nav class="main-nav"> <!--add main-nav--close to close navigation-->
       <button class="main-nav__toggle" type="button">
         <svg class="main-nav__burger" aria-hidden="true" focusable="false" width="50" height="24">
           <use href="img/sprite.svg#burger"></use>
@@ -105,7 +105,7 @@
             <label for="tower" class="achievements__custom-checkbox"></label>
             <label for="tower" class="achievements__label">Удержал башню</label>
           </li>
-          <li class="achievements__item">
+          <li class="achievements__item achievements__item--hotel">
             <input type="checkbox" class="visually-hidden achievements__input" name="achievements" id="hotel">
             <label for="hotel" class="achievements__custom-checkbox"></label>
             <label for="hotel" class="achievements__label">Разгромил отель</label>
