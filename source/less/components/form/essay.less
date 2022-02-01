@@ -1,0 +1,61 @@
+.essay {
+  border: none;
+  box-sizing: border-box;
+  width: 100vw;
+  margin-left: -20px;
+  margin-right: 0;
+  .padding-side--small;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 45px;
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    width: auto;
+    order: 6;
+    border: 2px solid #E5E5E5;
+    border-radius: 1px;
+    padding-left: 58px;
+    padding-right: 58px;
+    margin-bottom: 66px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}
+.essay__title {
+  .font-normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @redish;
+  float: left;
+  margin-bottom: 18px;
+  width: 100%;
+  @media (min-width: @tablet-width) {
+    float: none;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 38px;
+    padding-right: 38px;
+    margin-bottom: 0;
+  }
+}
+.essay__input {
+  padding-top: 11px;
+  padding-bottom: 3px;
+  height: 200px;
+  padding-right: 5px;
+  @media (min-width: @tablet-width) {
+    margin-top: 36px;
+    margin-bottom: 49px;
+    height: 193px;
+    padding-top: 13px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 33px;
+    margin-bottom: 43px;
+    height: 124px;
+  }
+}

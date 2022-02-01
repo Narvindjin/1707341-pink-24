@@ -1,0 +1,134 @@
+body {
+  margin: 0 auto;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+img {
+  max-width: 100%;
+}
+.button {
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+.page__body {
+  min-width: 320px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.index-main {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 100%;
+}
+.index-main__mobile-background {
+  display: none;
+  @media (max-width: @mobile-width-only) {
+  display: flex;
+  position: absolute;
+  background-image: url(../img/index/back-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: @blueish;
+  width: 100%;
+  height: 462px;
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/index/back-mobile2x.png);
+    }
+  }
+}
+.form-main {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.catalogue-main {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.form__input {
+  .font-normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: @blueish;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border: 2px solid #E5E5E5;
+  border-radius: 1px;
+  width: 100%;
+  height: 63px;
+}
+.form__input:hover {
+  border-color: @blueish;
+}
+.form__input:focus {
+  border-color: @redish;
+  outline: none;
+}
+.form__input::placeholder {
+  opacity: 1;
+}
+.slider__toggles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.slider__toggle {
+  display: flex;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  padding: 0;
+  background: none;
+  border: none;
+  opacity: 0.3;
+  border-radius: 50%;
+  margin-left: 6.5px;
+  margin-right: 6.5px;
+  svg {
+    display: flex;
+    margin: auto;
+    fill: @blueish;
+  }
+}
+.slider__toggle:hover:not(.slider__toggle--current) {
+  opacity: 0.6;
+}
+.slider__toggle:active:not(.slider__toggle--current) {
+  opacity: 0.1;
+}
+.slider__toggle--current {
+  opacity: 1;
+  border: 3px solid;
+  border-color: @blueish;
+  background-color: #FFFFFF;
+  svg {
+    display: none;
+  }
+}
+.green-button:hover {
+  background: #1C9B5E;
+  border: 2px solid #1C9B5E;
+}
+.green-button:active {
+  background: #1C9B5E;
+  border: 2px solid #1C9B5E;
+  color: rgba(255, 255, 255, 0.3);
+}
+.green-button:disabled {
+  background: #E5E5E5;
+  border: 2px solid #E5E5E5;
+}

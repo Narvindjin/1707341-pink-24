@@ -1,0 +1,94 @@
+.intro-download {
+  display: flex;
+  flex-direction: column;
+  background-color: #1D2631;
+  box-sizing: border-box;
+  width: 100%;
+  .padding-side--small;
+  padding-top: 28px;
+  z-index: 1;
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    background: transparent;
+  }
+}
+.intro-download__button {
+  .font-bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: #FFFFFF;
+  margin-bottom: 32px;
+  box-sizing: border-box;
+  width: 100%;
+  border: 3px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 29px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 46px;
+    max-width: 300px;
+  }
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
+    margin-bottom: 67px;
+  }
+}
+.intro-download__button:hover {
+  color: @redish;
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 7px rgba(1, 1, 1, 0.75);
+}
+.intro-download__button:active {
+  color: rgba(210, 40, 86, 0.3);
+  background-color: #FFFFFF;
+}
+.intro-download__icon-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  padding: 0px;
+  gap: 35px;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 21px;
+  align-items: flex-end;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 33px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 53px;
+  }
+}
+.intro-download__icon:nth-child(2n) {
+  margin-bottom: 3px;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 1px;
+  }
+}
+.intro-download__icon:nth-child(3n) {
+  margin-bottom: 3px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 7px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 3px;
+  }
+}
+.intro-download__description {
+  .font-light;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 30px;
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+}
+.intro-download__image {
+  display: block;
+}

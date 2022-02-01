@@ -1,0 +1,117 @@
+.intro {
+  padding-top: 90px;
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+  position: relative;
+  @media (min-width: @tablet-width) {
+    background-color: @blueish;
+    padding-top: 204px;
+    background-image: url(../img/index/back-tablet.png);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/index/back-tablet2x.png)
+    }
+  }
+  @media (min-width: @desktop-width) {
+    padding-top: 209px;
+    background-image: url(../img/index/back-desktop.png);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/index/back-desktop2x.png)
+    }
+  }
+}
+.intro::before {
+  @media (max-width: @mobile-width-only) {
+    content: "";
+    display: flex;
+    top: 0px;
+    position: absolute;
+    background-image: url(../img/index/back-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: @blueish;
+    width: 100%;
+    height: 462px;
+    z-index: -1;
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/index/back-mobile2x.png);
+    }
+  }
+}
+.intro__wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: @desktop-width;
+  width: 100vw;
+  box-sizing: border-box;
+  @media (min-width: @tablet-width) {
+    .padding-side--small;
+    min-height: 525px;
+  }
+  @media (min-width: @desktop-width) {
+    .padding-side--large;
+    position: relative;
+    min-height: 644px;
+  }
+}
+.intro__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    margin-right: calc(50vw - 10px);
+    width: 300px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+.intro__title {
+  .font-light;
+  display: flex;
+  font-size: 24px;
+  line-height: 29px;
+  align-self: center;
+  text-align: center;
+  color: #FFFFFF;
+  width: 280px;
+  margin-top: 0px;
+  margin-bottom: 29px;
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+    line-height: 48px;
+    width: 200px;
+  }
+  @media (min-width: @desktop-width) {
+    width: auto;
+    font-size: 50px;
+    line-height: 68px;
+    margin-bottom: 36px;
+  }
+}
+.intro__image {
+  background: transparent;
+  width: 320px;
+  height: 286px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 184px;
+    right: calc((100vw - 660px) / 2);
+    width: 660px;
+    height: 545px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    height: 645px;
+    bottom: 0;
+    right: 4px;
+    top: auto;
+  }
+}
