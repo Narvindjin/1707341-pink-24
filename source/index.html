@@ -8,29 +8,32 @@
   <link rel="icon" href="fav/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="fav/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
   <title>Приложение PINK</title>
 </head>
 <body class="page__body">
-  <header class="page-header"><!--remove page-header--fixed to return header to flow-->
+  <header class="page-header page-header--open"><!--only page-header for closed menu, add page-header--open to open menu, then page-header-noflow to remove it from flow-->
     <div class="page-header__wrapper">
     <a class="page-header__logo" href="index.html">
-      <svg class="page-header__logo-mobile" aria-hidden="true" focusable="false" width="74" height="23">
+      <svg class="page-header__logo-mobile" aria-hidden="true" width="74" height="23">
         <use href="img/sprite.svg#logotype-mobile"></use>
       </svg>
-      <svg class="page-header__logo-tablet" aria-hidden="true" focusable="false" width="145" height="40">
+      <svg class="page-header__logo-tablet" aria-hidden="true" width="145" height="40">
         <use href="img/sprite.svg#logotype-tablet"></use>
       </svg>
-      <svg class="page-header__logo-desktop" aria-hidden="true" focusable="false" width="147" height="40">
+      <svg class="page-header__logo-desktop" aria-hidden="true" width="147" height="40">
         <use href="img/sprite.svg#logotype-desktop"></use>
       </svg>
       <span class="visually-hidden">Приложение Пинк</span>
     </a>
-    <nav class="main-nav"> <!--add main-nav--close to close navigation-->
+    <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
-        <svg class="main-nav__burger" aria-hidden="true" focusable="false" width="50" height="24">
+        <svg class="main-nav__burger" aria-hidden="true" width="50" height="24">
           <use href="img/sprite.svg#burger"></use>
         </svg>
-        <svg class="main-nav__cross" aria-hidden="true" focusable="false" width="23" height="23">
+        <svg class="main-nav__cross" aria-hidden="true" width="23" height="23">
           <use href="img/sprite.svg#cross"></use>
         </svg>
         <span class="visually-hidden">Открыть меню</span>
@@ -96,7 +99,7 @@
     </section>
     <section class="advantages">
       <div class="advantages__wrapper">
-      <h2 class="advantages__intro">Устали от серости мегаполиса?<br><span class="advantages__intro--skip"><br></span> Нам есть, что вам <span class="advantages__intro--skip1"><br></span> предложить!</h2>
+      <h2 class="advantages__intro">Устали от серости мегаполиса?<br><span class="advantages__intro-skip"><br></span> Нам есть, что вам <span class="advantages__intro-skip1"><br></span> предложить!</h2>
       <div class="advantages__content-wrapper">
       <ul class="advantages__list">
         <li class="advantages__item">
@@ -140,25 +143,25 @@
       </div>
     </section>
     <section class="reviews">
-      <div class="reviews__wrapper slider">
+      <div class="reviews__wrapper">
         <h2 class="visually-hidden">Отзывы о приложении</h2>
-        <div class="reviews__list slider__list">
+        <div class="reviews__list">
           <button class="reviews__slider-arrow reviews__slider-arrow--left" type="button">
             <svg aria-hidden="true" focusable="false" width="22" height="41">
               <use href="img/sprite.svg#left-arrow"></use>
             </svg>
           </button>
-          <blockquote class="reviews__item slider__item slider__item--current">
+          <blockquote class="reviews__item reviews__item--current">
             <p class="reviews__author">Николай Петров</p>
             <p class="reviews__info">25 лет, водитель трамвая</p>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
-          <blockquote class="reviews__item slider__item">
+          <blockquote class="reviews__item">
             <p class="reviews__author"></p>
             <p class="reviews__info"></p>
             <p class="reviews__text"></p>
           </blockquote>
-          <blockquote class="reviews__item slider__item">
+          <blockquote class="reviews__item">
             <p class="reviews__author"></p>
             <p class="reviews__info"></p>
             <p class="reviews__text"></p>
@@ -169,21 +172,24 @@
             </svg>
           </button>
         </div>
-        <p class="reviews__toggles slider__toggles">
-          <button class="slider__toggle slider__toggle--current" type="button">
+        <p class="reviews__toggles toggle">
+          <button class="toggle__button toggle__button--current" type="button">
             <svg aria-hidden="true" focusable="false" width="6" height="6">
               <use href="img/sprite.svg#slider"></use>
             </svg>
+            <span class="visually-hidden">Первый отзыв</span>
           </button>
-          <button class="slider__toggle" type="button">
+          <button class="toggle__button" type="button">
             <svg aria-hidden="true" focusable="false" width="6" height="6">
               <use href="img/sprite.svg#slider"></use>
             </svg>
+            <span class="visually-hidden">Второй отзыв</span>
           </button>
-          <button class="slider__toggle" type="button">
+          <button class="toggle__button" type="button">
             <svg aria-hidden="true" focusable="false" width="6" height="6">
               <use href="img/sprite.svg#slider"></use>
             </svg>
+            <span class="visually-hidden">Третий отзыв</span>
           </button>
         </p>
       </div>
@@ -191,7 +197,7 @@
     <section class="pricing">
       <div class="pricing__wrapper">
       <h2 class="visually-hidden">Предложения</h2>
-      <table class="pricing__table slider__list"> <!--add pricing__table--first or pricing__table--third to view first or third column on mobile version-->
+      <table class="pricing__table slider"> <!--add pricing__table--first or pricing__table--third to view first or third column on mobile version-->
         <tr class="pricing__row">
           <th class="pricing__header pricing__header--skip"></th>
           <th class="pricing__header">База<br>
@@ -208,7 +214,7 @@
           <td class="pricing__cell pricing__cell--legend"><span class="pricing__cell-text">Розовый фильтр</span></td>
           <td class="pricing__cell">
             <div class="pricing__cell-wrapper">
-            <span class="pricing__cell-text pricing__cell--none">Розовый фильтр</span><span class="visually-hidden">Есть</span>
+            <span class="pricing__cell-text pricing__cell-none">Розовый фильтр</span><span class="visually-hidden">Есть</span>
             <svg class="pricing__cell-icon" aria-hidden="true" focusable="false" width="31" height="21">
               <use href="img/sprite.svg#yes"></use>
             </svg>
@@ -216,7 +222,7 @@
           </td>
           <td class="pricing__cell">
             <div class="pricing__cell-wrapper">
-            <span class="pricing__cell-text pricing__cell--none">Розовый фильтр</span><span class="visually-hidden">Есть</span>
+            <span class="pricing__cell-text pricing__cell-none">Розовый фильтр</span><span class="visually-hidden">Есть</span>
             <svg class="pricing__cell-icon" aria-hidden="true" focusable="false" width="31" height="21">
               <use href="img/sprite.svg#yes"></use>
             </svg>
@@ -224,7 +230,7 @@
           </td>
           <td class="pricing__cell">
             <div class="pricing__cell-wrapper">
-            <span class="pricing__cell-text pricing__cell--none">Розовый фильтр</span><span class="visually-hidden">Есть</span>
+            <span class="pricing__cell-text pricing__cell-none">Розовый фильтр</span><span class="visually-hidden">Есть</span>
             <svg class="pricing__cell-icon" aria-hidden="true" focusable="false" width="31" height="21">
               <use href="img/sprite.svg#yes"></use>
             </svg>
@@ -235,7 +241,7 @@
           <td class="pricing__cell pricing__cell--legend"><span class="pricing__cell-text">Смайлики</span></td>
           <td class="pricing__cell">
             <div class="pricing__cell-wrapper">
-            <span class="pricing__cell-text pricing__cell--none">Смайлики</span><span class="visually-hidden">Нет</span>
+            <span class="pricing__cell-text pricing__cell-none">Смайлики</span><span class="visually-hidden">Нет</span>
             <svg class="pricing__cell-icon pricing__cell-icon--cross" aria-hidden="true" focusable="false" width="27" height="27">
               <use href="img/sprite.svg#no"></use>
             </svg>
@@ -243,7 +249,7 @@
           </td>
           <td class="pricing__cell">
             <div class="pricing__cell-wrapper">
-            <span class="pricing__cell-text pricing__cell--none">Смайлики</span><span class="visually-hidden">Есть</span>
+            <span class="pricing__cell-text pricing__cell-none">Смайлики</span><span class="visually-hidden">Есть</span>
             <svg class="pricing__cell-icon" aria-hidden="true" focusable="false" width="31" height="21">
               <use href="img/sprite.svg#yes"></use>
             </svg>
@@ -251,7 +257,7 @@
           </td>
           <td class="pricing__cell">
             <div class="pricing__cell-wrapper">
-            <span class="pricing__cell-text pricing__cell--none">Смайлики</span><span class="visually-hidden">Есть</span>
+            <span class="pricing__cell-text pricing__cell-none">Смайлики</span><span class="visually-hidden">Есть</span>
             <svg class="pricing__cell-icon" aria-hidden="true" focusable="false" width="31" height="21">
               <use href="img/sprite.svg#yes"></use>
             </svg>
@@ -262,7 +268,7 @@
           <td class="pricing__cell pricing__cell--legend"><span class="pricing__cell-text">Комментарии</span></td>
           <td class="pricing__cell">
             <div class="pricing__cell-wrapper">
-            <span class="pricing__cell-text pricing__cell--none">Комментарии</span><span class="visually-hidden">Нет</span>
+            <span class="pricing__cell-text pricing__cell-none">Комментарии</span><span class="visually-hidden">Нет</span>
             <svg class="pricing__cell-icon pricing__cell-icon--cross" aria-hidden="true" focusable="false" width="27" height="27">
               <use href="img/sprite.svg#no"></use>
             </svg>
@@ -270,7 +276,7 @@
           </td>
           <td class="pricing__cell">
             <div class="pricing__cell-wrapper">
-            <span class="pricing__cell-text pricing__cell--none">Комментарии</span><span class="visually-hidden">Нет</span>
+            <span class="pricing__cell-text pricing__cell-none">Комментарии</span><span class="visually-hidden">Нет</span>
             <svg class="pricing__cell-icon pricing__cell-icon--cross" aria-hidden="true" focusable="false" width="27" height="27">
               <use href="img/sprite.svg#no"></use>
             </svg>
@@ -278,7 +284,7 @@
           </td>
           <td class="pricing__cell">
             <div class="pricing__cell-wrapper">
-            <span class="pricing__cell-text pricing__cell--none">Комментарии</span><span class="visually-hidden">Есть</span>
+            <span class="pricing__cell-text pricing__cell-none">Комментарии</span><span class="visually-hidden">Есть</span>
             <svg class="pricing__cell-icon" aria-hidden="true" focusable="false" width="31" height="21">
               <use href="img/sprite.svg#yes"></use>
             </svg>
@@ -286,21 +292,24 @@
           </td>
         </tr>
       </table>
-      <p class="pricing__toggles slider__toggles">
-        <button class="slider__toggle" type="button">
+      <p class="pricing__toggles toggle">
+        <button class="toggle__button" type="button">
           <svg aria-hidden="true" focusable="false" width="6" height="6">
             <use href="img/sprite.svg#slider"></use>
           </svg>
+          <span class="visually-hidden">Первое предложение</span>
         </button>
-        <button class="slider__toggle slider__toggle--current" type="button">
+        <button class="toggle__button toggle__button--current" type="button">
           <svg aria-hidden="true" focusable="false" width="6" height="6">
             <use href="img/sprite.svg#slider"></use>
           </svg>
+          <span class="visually-hidden">Второе предложение</span>
         </button>
-        <button class="slider__toggle" type="button">
+        <button class="toggle__button" type="button">
           <svg aria-hidden="true" focusable="false" width="6" height="6">
             <use href="img/sprite.svg#slider"></use>
           </svg>
+          <span class="visually-hidden">Третье предложение</span>
         </button>
       </p>
     </div>
@@ -333,7 +342,7 @@
     </div>
     </section>
   </main>
-  <footer class="page-footer">
+  <footer class="footer">
     <div class="footer__wrapper">
     <a class="footer__logo" href="index.html">
       <svg class="footer__logo-tablet" aria-hidden="true" focusable="false" width="145" height="40">
@@ -371,8 +380,8 @@
       </li>
     </ul>
     <div class="footer__made">
-      <span class="footer__made--text">Разработано</span>
-      <a class="footer__made--link" href="https://htmlacademy.ru/intensive/adaptive">
+      <span class="footer__made-text">Разработано</span>
+      <a class="footer__made-link" href="https://htmlacademy.ru/intensive/adaptive">
         <svg aria-hidden="true" focusable="false" width="27" height="34">
           <use href="img/sprite.svg#html-logo"></use>
         </svg>

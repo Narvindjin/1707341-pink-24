@@ -8,10 +8,13 @@
   <link rel="icon" href="fav/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="fav/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
   <title>Приложение PINK</title>
 </head>
 <body class="page__body">
-  <header class="page-header"><!--remove page-header--fixed to return header to flow-->
+  <header class="page-header page-header--open"><!--only page-header for closed menu, add page-header--open to open menu, then page-header-noflow to remove it from flow-->
     <div class="page-header__wrapper">
     <a class="page-header__logo" href="index.html">
       <svg class="page-header__logo-mobile" aria-hidden="true" focusable="false" width="74" height="23">
@@ -25,7 +28,7 @@
       </svg>
       <span class="visually-hidden">Приложение Пинк</span>
     </a>
-    <nav class="main-nav"> <!--add main-nav--close to close navigation-->
+    <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
         <svg class="main-nav__burger" aria-hidden="true" focusable="false" width="50" height="24">
           <use href="img/sprite.svg#burger"></use>
@@ -71,7 +74,7 @@
             <source type="image/webp" srcset="img/catalog/panorama-mobile.webp 1x, img/catalog/panorama-mobile2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/catalog/panorama-desktop.jpg 1x, img/catalog/panorama-desktop2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/catalog/panorama-tablet.jpg 1x, img/catalog/panorama-tablet2x.jpg 2x">
-            <img class="gallery__image gallery__image--panoramic" src="img/catalog/panorama-mobile.jpg" srcset="img/catalog/panorama-mobile2x.jpg 2x"  alt="Панорама моста над обширным лесом.">
+            <img class="gallery__image gallery__image--panoramic" src="img/catalog/panorama-mobile.jpg" srcset="img/catalog/panorama-mobile2x.jpg 2x" alt="Панорама моста над обширным лесом.">
           </picture>
           </a>
           <div class="gallery__info gallery__info--panoramic">
@@ -84,6 +87,7 @@
               <svg aria-hidden="true" focusable="false" width="13" height="12">
                 <use href="img/sprite.svg#heart"></use>
               </svg>
+              <span class="visually-hidden">Поставить лайк</span>
             </button>
           </div>
         </div>
@@ -108,6 +112,7 @@
               <svg aria-hidden="true" focusable="false" width="13" height="12">
                 <use href="img/sprite.svg#heart"></use>
               </svg>
+              <span class="visually-hidden">Поставить лайк</span>
             </button>
           </div>
         </div>
@@ -132,6 +137,7 @@
               <svg aria-hidden="true" focusable="false" width="13" height="12">
                 <use href="img/sprite.svg#heart"></use>
               </svg>
+              <span class="visually-hidden">Поставить лайк</span>
             </button>
           </div>
         </div>
@@ -156,6 +162,7 @@
               <svg aria-hidden="true" focusable="false" width="13" height="12">
                 <use href="img/sprite.svg#heart"></use>
               </svg>
+              <span class="visually-hidden">Поставить лайк</span>
             </button>
           </div>
         </div>
@@ -180,6 +187,7 @@
               <svg aria-hidden="true" focusable="false" width="13" height="12">
                 <use href="img/sprite.svg#heart"></use>
               </svg>
+              <span class="visually-hidden">Поставить лайк</span>
             </button>
           </div>
         </div>
@@ -204,6 +212,7 @@
               <svg aria-hidden="true" focusable="false" width="13" height="12">
                 <use href="img/sprite.svg#heart"></use>
               </svg>
+              <span class="visually-hidden">Поставить лайк</span>
             </button>
           </div>
         </div>
@@ -228,6 +237,7 @@
               <svg aria-hidden="true" focusable="false" width="13" height="12">
                 <use href="img/sprite.svg#heart"></use>
               </svg>
+              <span class="visually-hidden">Поставить лайк</span>
             </button>
           </div>
         </div>
@@ -249,37 +259,46 @@
           <ul class="upload__list">
             <li class="upload__item">
               <button class="upload__setting upload__setting--current" type="button">
-                <svg class="upload__setting-icon upload__setting--size" aria-hidden="true" focusable="false" viewBox="0 0 44 44">
+                <svg class="upload__setting-icon upload__setting-icon--size" aria-hidden="true" focusable="false" viewBox="0 0 44 44">
                   <use href="img/sprite.svg#crop"></use>
                 </svg>
+                <span class="visually-hidden">Обрезать фотографию</span>
               </button>
               <div class="upload__range upload__range--current">
                 <div class="upload__range-bar">
-                  <button class="upload__range-toggle upload__range-toggle--size" type="button"></button>
+                  <button class="upload__range-toggle upload__range-toggle--size" type="button">
+                    <span class="visually-hidden">Бегунок для изменения размера</span>
+                  </button>
                 </div>
               </div>
             </li>
             <li class="upload__item">
               <button class="upload__setting upload__setting" type="button">
-                <svg class="upload__setting-icon upload__setting--color" aria-hidden="true" focusable="false" viewBox="0 0 48 43">
+                <svg class="upload__setting-icon upload__setting-icon--color" aria-hidden="true" focusable="false" viewBox="0 0 48 43">
                   <use href="img/sprite.svg#fill"></use>
                 </svg>
+                <span class="visually-hidden">Изменить цвет фотографии</span>
               </button>
               <div class="upload__range">
                 <div class="upload__range-bar">
-                  <button class="upload__range-toggle upload__range-toggle--color" type="button"></button>
+                  <button class="upload__range-toggle upload__range-toggle--color" type="button">
+                    <span class="visually-hidden">Бегунок для изменения цвета</span>
+                  </button>
                 </div>
               </div>
             </li>
             <li class="upload__item">
               <button class="upload__setting" type="button">
-                <svg class="upload__setting-icon upload__setting--brightness" aria-hidden="true" focusable="false" viewBox="0 0 32 32">
+                <svg class="upload__setting-icon upload__setting-icon--brightness" aria-hidden="true" focusable="false" viewBox="0 0 32 32">
                   <use href="img/sprite.svg#contrast"></use>
                 </svg>
+                <span class="visually-hidden">Изменить контраст фотографии</span>
               </button>
               <div class="upload__range">
                 <div class="upload__range-bar">
-                  <button class="upload__range-toggle upload__range-toggle--brightness" type="button"></button>
+                  <button class="upload__range-toggle upload__range-toggle--brightness" type="button">
+                    <span class="visually-hidden">Бегунок для изменения контраста</span>
+                  </button>
                 </div>
               </div>
             </li>
@@ -292,7 +311,7 @@
       </div>
     </section>
   </main>
-  <footer class="page-footer">
+  <footer class="footer">
     <div class="footer__wrapper">
     <a class="footer__logo" href="index.html">
       <svg class="footer__logo-tablet" aria-hidden="true" focusable="false" width="145" height="40">
@@ -330,8 +349,8 @@
       </li>
     </ul>
     <div class="footer__made">
-      <span class="footer__made--text">Разработано</span>
-      <a class="footer__made--link" href="https://htmlacademy.ru/intensive/adaptive">
+      <span class="footer__made-text">Разработано</span>
+      <a class="footer__made-link" href="https://htmlacademy.ru/intensive/adaptive">
         <svg aria-hidden="true" focusable="false" width="27" height="34">
           <use href="img/sprite.svg#html-logo"></use>
         </svg>

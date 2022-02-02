@@ -86,9 +86,6 @@
     margin-bottom: 0;
   }
 }
-.achievements__item--hotel {
-  margin-left: auto;
-}
 .achievements__custom-checkbox {
   display: inline-flex;
   align-items: center;
@@ -114,6 +111,9 @@
 }
 .achievements__input:active + .achievements__custom-checkbox::before {
   border-color: @redish;
+}
+.achievements__input:focus + .achievements__custom-checkbox::before {
+  border-color: @blueish;
 }
 .achievements__label {
   font-size: 18px;

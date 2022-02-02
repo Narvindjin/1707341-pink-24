@@ -1,0 +1,39 @@
+.toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.toggle__button {
+  display: flex;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  padding: 0;
+  background: none;
+  border: none;
+  opacity: 0.3;
+  border-radius: 50%;
+  margin-left: 6.5px;
+  margin-right: 6.5px;
+  svg {
+    display: flex;
+    margin: auto;
+    fill: @blueish;
+  }
+}
+.toggle__button:hover:not(.toggle__button--current) {
+  opacity: 0.6;
+}
+.toggle__button:active:not(.toggle__button--current) {
+  opacity: 0.1;
+}
+.toggle__button--current {
+  opacity: 1;
+  border: 3px solid;
+  border-color: @blueish;
+  background-color: #FFFFFF;
+  svg {
+    display: none;
+  }
+}
